@@ -1,0 +1,7 @@
+var count = new GlideAggregate('TABLE');
+count.addAggregate('COUNT');
+count.addQuery("Field", Condition);
+count.query();
+var answer= 0;
+if (count.next()) 
+   answer= count.getAggregate('COUNT');
